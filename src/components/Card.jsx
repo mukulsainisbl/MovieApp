@@ -10,9 +10,9 @@ const Card = ({data , index , trending , media_type}) => {
     <Link to={"/"+mediaType+'/'+data.id} className='w-full min-w-[230px] max-w-[230px] relative  block hover:scale-99   transition-all   rounded-r h-80 overflow-hidden '>
       {
         data.poster_path ? (
-          <img className='border-red-600 border-2'  src={imageURL+data.poster_path} alt="" />
+          <img  src={imageURL+data.poster_path} alt="" />
 
-        ) : ( <div className='bg-neutral-800 h-full border-red-600 border-2 w-full flex justify-center items-center '>
+        ) : ( <div className='bg-neutral-800 h-full  w-full flex justify-center items-center '>
           No Image Found...
         </div> )
       }
@@ -25,7 +25,7 @@ const Card = ({data , index , trending , media_type}) => {
         )
       }
     </div>
-    <div className='absolute border-red-600 border-2  border-t-0  bottom-0 backdrop-blur-3xl  rounded-r overflow-hidden w-full bg-black/50 h-16  p-2 '> 
+    <div className='absolute   border-t-0  bottom-0 backdrop-blur-3xl  rounded-r overflow-hidden w-full bg-black/50 h-16  p-2 '> 
         <h2 className='text-ellipsis line-clamp-1 text-lg font-semibold  '> {data?.title || data?.name}</h2>
         <div className='text-sm flex justify-between items-center  text-neutral-400'>
           <p>{moment(data?.first_air_date).format("MMM Do YYYY") || moment(data?.release_date).format("MMM Do YYYY") }</p>
