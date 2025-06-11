@@ -13,15 +13,13 @@ const DetailPage = () => {
   const navigate = useNavigate();
   const imageURL = useSelector((state) => state.movieData.imageURL);
 
-  const { data  } = AxiosFetchDetails(`/${params?.explore}/${params?.id}`);
+  const { data } = AxiosFetchDetails(`/${params?.explore}/${params?.id}`);
   const { data: castData } = AxiosFetchDetails(
     `/${params?.explore}/${params?.id}/credits`
   );
   const { data: similarData } = AxiosFetchDetails(
     `/${params?.explore}/${params?.id}/similar`
   );
-
-
 
   // Format runtime from minutes to hours and minutes
   const formatRuntime = (minutes) => {
@@ -36,13 +34,10 @@ const DetailPage = () => {
     navigate(`/${params.explore}/${id}`);
     window.scrollTo(0, 0); // Scroll to top after navigation
   };
-   
-  const handleClick =()=>{
-    window.location.reload()
-  }
 
-
-
+  const handleClick = () => {
+    window.location.reload();
+  };
 
   return (
     <div className="text-white bg-gradient-to-b from-neutral-900 to-neutral-950 min-h-screen">
@@ -99,7 +94,11 @@ const DetailPage = () => {
               </h1>
               {data?.release_date && (
                 <span className="text-neutral-400 text-lg">
-                  ({new Date(data.release_date || data.first_air_date).getFullYear()})
+                  (
+                  {new Date(
+                    data.release_date || data.first_air_date
+                  ).getFullYear()}
+                  )
                 </span>
               )}
             </div>
@@ -141,7 +140,9 @@ const DetailPage = () => {
                 <div>
                   <p className="text-sm text-neutral-400">Runtime</p>
                   <p className="font-semibold">
-                    {formatRuntime(data?.runtime || data?.episode_run_time?.[0])}
+                    {formatRuntime(
+                      data?.runtime || data?.episode_run_time?.[0]
+                    )}
                   </p>
                 </div>
               </div>
@@ -152,7 +153,9 @@ const DetailPage = () => {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-400">Popularity</p>
-                  <p className="font-semibold">{Math.round(data?.popularity)}</p>
+                  <p className="font-semibold">
+                    {data?.popularity ? Math.round(data.popularity) : "N/A"}
+                  </p>
                 </div>
               </div>
 
@@ -172,7 +175,9 @@ const DetailPage = () => {
             {/* OVERVIEW */}
             <div className="space-y-2">
               <h3 className="text-xl font-semibold">Overview</h3>
-              <p className="text-neutral-300 leading-relaxed">{data?.overview}</p>
+              <p className="text-neutral-300 leading-relaxed">
+                {data?.overview}
+              </p>
             </div>
 
             {/* STATUS */}
@@ -235,19 +240,21 @@ const DetailPage = () => {
         {similarData?.results?.length > 0 && (
           <div className="mt-12">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <FaEye className="text-red-500" /> Similar {params?.explore === "movie" ? "Movies" : "TV Shows"}
+              <FaEye className="text-red-500" /> Similar{" "}
+              {params?.explore === "movie" ? "Movies" : "TV Shows"}
             </h2>
-            <div onClick={handleClick} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div
+              onClick={handleClick}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+            >
               {similarData.results.slice(0, 10).map((item) => (
                 <div
-                
                   key={item.id}
                   className="bg-neutral-800/50 hover:bg-neutral-800 rounded-lg overflow-hidden transition-all group cursor-pointer"
-                  onClick={() => handleSimilarClick(item.id) }
+                  onClick={() => handleSimilarClick(item.id)}
                 >
                   <div className="relative aspect-[2/3] overflow-hidden">
                     <img
-                    
                       src={
                         item.poster_path
                           ? imageURL + item.poster_path
@@ -264,7 +271,9 @@ const DetailPage = () => {
                           {item.vote_average?.toFixed(1)}
                         </span>
                         <span className="text-xs bg-black/70 px-2 py-1 rounded">
-                          {new Date(item.release_date || item.first_air_date).getFullYear()}
+                          {new Date(
+                            item.release_date || item.first_air_date
+                          ).getFullYear()}
                         </span>
                       </div>
                     </div>
@@ -279,10 +288,7 @@ const DetailPage = () => {
             </div>
           </div>
         )}
-
       </div>
-
-      
     </div>
   );
 };
