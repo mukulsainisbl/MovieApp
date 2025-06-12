@@ -6,7 +6,6 @@ import { IoMdTime } from "react-icons/io";
 import { MdDateRange } from "react-icons/md";
 import { RiMovie2Line } from "react-icons/ri";
 import HorizontalScrollCard from "../components/HorizontalScrollCard";
-import useAxiosRequest from "../hooks/Axios";
 
 const DetailPage = () => {
   const params = useParams();
@@ -33,11 +32,10 @@ const DetailPage = () => {
   const handleSimilarClick = (id) => {
     navigate(`/${params.explore}/${id}`);
     window.scrollTo(0, 0); // Scroll to top after navigation
+     window.location.reload();
   };
 
-  const handleClick = () => {
-    window.location.reload();
-  };
+
 
   return (
     <div className="text-white bg-gradient-to-b from-neutral-900 to-neutral-950 min-h-screen">
@@ -70,6 +68,7 @@ const DetailPage = () => {
           {/* POSTER */}
           <div className="relative group w-full max-w-xs mx-auto lg:mx-0">
             <img
+            loading="lazy"
               src={
                 data?.poster_path
                   ? imageURL + data.poster_path
@@ -214,6 +213,7 @@ const DetailPage = () => {
                 >
                   <div className="relative aspect-[2/3] overflow-hidden">
                     <img
+                    loading="lazy"
                       src={
                         actor.profile_path
                           ? imageURL + actor.profile_path
@@ -244,7 +244,7 @@ const DetailPage = () => {
               {params?.explore === "movie" ? "Movies" : "TV Shows"}
             </h2>
             <div
-              onClick={handleClick}
+              // onClick={handleClick}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
             >
               {similarData.results.slice(0, 10).map((item) => (
@@ -255,6 +255,7 @@ const DetailPage = () => {
                 >
                   <div className="relative aspect-[2/3] overflow-hidden">
                     <img
+                    loading="lazy"
                       src={
                         item.poster_path
                           ? imageURL + item.poster_path

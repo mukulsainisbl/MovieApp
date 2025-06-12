@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Card from './Card';
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
@@ -12,6 +12,9 @@ const HorizontalScrollCard = ({data = [] , heading , trending  , media_type }) =
       containerRef.current.scrollLeft -= 300
 
     }
+    useEffect(()=>{
+          window.scrollTo(0, 0); // Scroll to top after navigation
+    },[])
   return (
 
      <div className=" w-full     px-3 my-10">
