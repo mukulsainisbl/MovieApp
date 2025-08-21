@@ -1,13 +1,43 @@
-# React + Vite
+# 🎬 Frame Fusion - Movie Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Frame Fusion](https://drive.google.com/uc?export=download&id=YOUR_BANNER_IMAGE_ID)
 
-Currently, two official plugins are available:
+## 🚀 Overview
+**Frame Fusion** is a movie discovery web application powered by the **TMDB API**.  
+It allows users to explore trending movies, search for specific titles, and view detailed information such as ratings, overviews, and release dates — all wrapped in a modern, responsive UI.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates **React.js**, **Tailwind CSS**, and real-world **API integration**, deployed seamlessly on **Vercel**.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# MovieApp
+## 🛠️ Tech Stack
+- **Frontend**: React.js (Vite), Tailwind CSS  
+- **API**: TMDB (The Movie Database API)  
+- **State Management**: Context API (or hooks if you used them)  
+- **Deployment**: Vercel  
+
+---
+
+## 🎯 Features
+✅ **Search Movies** – Quickly find movies using TMDB search.  
+✅ **Trending & Popular** – Browse popular and trending movies.  
+✅ **Movie Details Page** – Posters, ratings, overviews, and release dates.  
+✅ **Responsive Design** – Works on desktop, tablet, and mobile.  
+✅ **Fast & Optimized** – Deployed with Vercel for speed.  
+
+---
+
+## 📸 Screenshots
+![Home Page](https://drive.google.com/uc?export=download&id=YOUR_HOME_SCREENSHOT_ID)  
+![Movie Details](https://drive.google.com/uc?export=download&id=YOUR_DETAILS_SCREENSHOT_ID)  
+![Search Results](https://drive.google.com/uc?export=download&id=YOUR_SEARCH_SCREENSHOT_ID)  
+
+> 🖼️ Replace `YOUR_..._ID` with your actual Google Drive image IDs or keep images in a `/screenshots/` folder inside your repo.  
+
+---
+
+## 🔧 Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/frame-fusion.git
+   cd frame-fusion
