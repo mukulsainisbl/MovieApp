@@ -28,16 +28,8 @@ This project demonstrates **React.js**, **Tailwind CSS**, and real-world **API i
 ---
 
 ## 📸 Screenshots
-![Home Page](https://drive.google.com/uc?export=download&id=YOUR_HOME_SCREENSHOT_ID)  
-![Movie Details](https://drive.google.com/uc?export=download&id=YOUR_DETAILS_SCREENSHOT_ID)  
-![Search Results](https://drive.google.com/uc?export=download&id=YOUR_SEARCH_SCREENSHOT_ID)  
+![Home Page](https://drive.google.com/uc?export=download&id=1E6FY2DMIvNMeojBX8qsc1tieTew-P7R1)  
+![Movie Details](https://drive.google.com/uc?export=download&id=1iHuQqDT7TtT9c7ltHlqwC6Iz-wnq_sgH)  
+![Search Results](https://drive.google.com/uc?export=download&id=1irP3G2oZrqqJtoZ8Bk164JdCwfCO1Pyc)  
 
-> 🖼️ Replace `YOUR_..._ID` with your actual Google Drive image IDs or keep images in a `/screenshots/` folder inside your repo.  
 
----
-
-## 🔧 Installation & Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/frame-fusion.git
-   cd frame-fusion
