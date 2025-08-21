@@ -1,6 +1,6 @@
 # 🎬 Frame Fusion - Movie Discovery App
 
-![Frame Fusion](https://drive.google.com/uc?export=download&id=YOUR_BANNER_IMAGE_ID)
+![Frame Fusion](https://drive.google.com/file/d/10fCMyx1r4ESHiz_ybtNlMS17sGKhh1QT/view)
 
 ## 🚀 Overview
 **Frame Fusion** is a movie discovery web application powered by the **TMDB API**.  
